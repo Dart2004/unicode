@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+<body onload="run()">
+	<script>
+		function run(){
+			hash = window.location.hash
+			hash = hash.replace("#","")
+			if (hash.includes("too")){
+				hash=hash.replace("too","");
+				document.write(String.fromCodePoint(hash))
+			}
+			else if (hash.includes("tou")){
+				hash=hash.replace("tou","");
+				document.write(hash.codePointAt(0).toString())
+			}
+			else {
+				document.write("<h1>Error</h1><br>Please use our API:<br>#tou&lt;object&gt; to get the unicode<br>\n#too&lt;unicode&gt; to get the object")
+			}
+		}
+	</script>
+</body>
